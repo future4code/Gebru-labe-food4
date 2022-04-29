@@ -1,29 +1,29 @@
-import React from 'react'
-
-import { useNavigate } from "react-router-dom"
-import { goToFeed, goToRegister } from "../../Routes/coodinator"
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { goToRegister } from "../../Routes/coodinator";
+import { Container, SignUpButtonContainer, TextStyle3 } from "./styles";
+import Button from "@mui/material/Button";
+import LoginForm from "./LoginForm";
+import LogoFood from "../../components/logoFood/LogoFood";
 
 const Login = () => {
-  const navigate = useNavigate()
-  
-  return (
-    <div>
-        <h1>Login</h1>
-        <button
-          onClick={() => goToFeed(navigate)}
-        >
-          Entrar
-        </button>
-        <h4>
-          Não possui cadastro
-          <button
-            onClick={() => goToRegister(navigate)}
-          >
-            Clique aqui
-          </button>
-        </h4>
-    </div>
-  )
-}
+  const navigate = useNavigate();
 
-export default Login
+  return (
+    <Container>
+      <LogoFood />
+      <TextStyle3>
+        <p>Entrar</p>
+      </TextStyle3>
+      <LoginForm />
+
+      <SignUpButtonContainer>
+        <Button onClick={() => goToRegister(navigate)}>
+          Não possui cadastro? Clique aqui.
+        </Button>
+      </SignUpButtonContainer>
+    </Container>
+  );
+};
+
+export default Login;

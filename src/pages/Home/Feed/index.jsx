@@ -3,8 +3,10 @@ import React from 'react'
 import Header from '../../../components/Header'
 import { useNavigate } from "react-router-dom"
 import { goToRestaurant } from "../../../Routes/coodinator"
+import { useProtectedPage } from '../../../hooks/useProtectedPage'
 
 const Feed = () => {
+  useProtectedPage();
   const navigate = useNavigate()
 
   return (
