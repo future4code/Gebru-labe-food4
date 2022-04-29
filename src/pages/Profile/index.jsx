@@ -1,8 +1,12 @@
 import React from 'react'
 
 import Header from '../../components/Header'
+import { useProtectedPage } from '../../hooks/useProtectedPage'
+
 
 const Profile = () => {
+useProtectedPage();
+
   return (
     <div>
         <Header>
