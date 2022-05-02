@@ -3,24 +3,28 @@ import React from 'react'
 import { useNavigate } from "react-router-dom"
 import Header from '../../components/Header'
 import { useUnprotectedPage } from '../../hooks/useUnprotectedPage'
-import { goToLogin } from "../../Routes/coodinator"
+
+import { Container, TextStyle3 } from "./styles";
+
+import LogoFood from "../../components/logoFood/LogoFood"
+import RegisterForm from "./RegisterForm"
+
+
+
 
 const Register = () => {
   useUnprotectedPage();
   const navigate = useNavigate()
   
   return (
-    <div>
+    <Container>
       <Header />
-   
+      <LogoFood/>
 
-        <h1>Cadastro</h1>
-        <button
-          onClick={() => goToLogin(navigate)}
-        >
-          Cadastrar
-        </button>
-    </div>
+      <TextStyle3> <p>  Cadastrar </p> </TextStyle3>
+
+      <RegisterForm/>
+    </Container>
   )
 }
 
