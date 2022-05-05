@@ -103,7 +103,7 @@ const RegisterForm = () => {
           style={{ width: "100%", marginTop: "1em" }}
           variant="outlined"
         >
-          <InputLabel htmlFor="campoSenha"> Confirmar Senha</InputLabel>
+          <InputLabel htmlFor="campoSenha">Confirmar Senha</InputLabel>
           <OutlinedInput
             id="campoConfirmarSenha"
             name={"password"}

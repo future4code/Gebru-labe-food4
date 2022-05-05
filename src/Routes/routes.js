@@ -11,7 +11,7 @@ import Cart from '../pages/Cart'
 export const Router = () => (
     <Routes>
         <Route index element={ <Feed /> } />
-        <Route path='restaurante' element={ <Restaurant /> } />
+        <Route path='restaurante/:id' element={ <Restaurant /> } />
         <Route path='perfil' element={ <Profile /> } />
         <Route path='login' element={ <Login /> } />
         <Route path='cadastro' element={ <Register /> } />

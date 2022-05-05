@@ -2,8 +2,8 @@ export const goToFeed = (navigate) => {
     navigate('/')
 }
 
-export const goToRestaurant = (navigate) => {
-    navigate('/restaurante')
+export const goToRestaurant = (navigate, id) => {
+    navigate(`/restaurante/${id}`)
 }
 
 export const goToProfile = (navigate) => {
