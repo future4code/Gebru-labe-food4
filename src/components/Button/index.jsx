@@ -2,13 +2,11 @@ import React from 'react'
 
 import * as Styled from './styles'
 
-export const Buttons = (props) => {
+export const Button = (props) => {
 
   return (
     <Styled.Container 
-      onClick={props.onClick}
-      width={props.width}
-      height={props.height} 
+      onClick={props.onClick} 
     >
         {props.children}
     </Styled.Container>

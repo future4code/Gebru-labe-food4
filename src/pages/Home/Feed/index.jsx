@@ -1,24 +1,31 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
+import * as Styled from './styled'
 import Header from '../../../components/Header'
-import { useNavigate } from "react-router-dom"
-import { goToRestaurant } from "../../../Routes/coodinator"
+// import { useNavigate } from "react-router-dom"
+// import { goToRestaurant } from "../../../Routes/coodinator"
 import { useProtectedPage } from '../../../hooks/useProtectedPage'
+import CardRestautant from '../../../components/CardRestautant'
+import GlobalStateContext from '../../../Global/GlobalStateContext'
 
 const Feed = () => {
   useProtectedPage();
-  const navigate = useNavigate()
-
+  // const navigate = useNavigate()
+  const { restaurants } = useContext(GlobalStateContext)
+  
   return (
-    <div>
+    <Styled.Container>
         <Header>
-            <h2>4FOOD</h2>
+            <h2>ifuture</h2>
         </Header>
-        <h1>4FOOD</h1>
-        <button onClick={() => goToRestaurant(navigate)}>
-          Restaurante
-        </button>
-    </div>
+        {
+          restaurants.length > 0 ?
+          restaurants.map((restaurant) => {
+            return <CardRestautant key={restaurant.id} restaurant={restaurant}/>
+          }) 
+          : <h1>Loading</h1>
+        }
+    </Styled.Container>
   )
 }
 

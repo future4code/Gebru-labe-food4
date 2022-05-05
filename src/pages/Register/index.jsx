@@ -1,7 +1,5 @@
 import React from 'react'
 
-import { useNavigate } from "react-router-dom"
-import Header from '../../components/Header'
 import { useUnprotectedPage } from '../../hooks/useUnprotectedPage'
 
 import { Container, TextStyle3 } from "./styles";
@@ -13,12 +11,10 @@ import RegisterForm from "./RegisterForm"
 
 
 const Register = () => {
-  useUnprotectedPage();
-  const navigate = useNavigate()
+  useUnprotectedPage()
   
   return (
     <Container>
-      <Header />
       <LogoFood/>
 
       <TextStyle3> <p>  Cadastrar </p> </TextStyle3>
