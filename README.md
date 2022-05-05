@@ -1,10 +1,10 @@
 4FoodB
 
-Link Trello
+### Link Trello
 https://trello.com/b/iaNW5i6X/fourfoodb
 
-Link Surge
-Só é necessário na entrega final!!
+### Link Surge
+[labe-food4.surge.sh](labe-food4.surge.sh)
 
 O que funciona:
 
