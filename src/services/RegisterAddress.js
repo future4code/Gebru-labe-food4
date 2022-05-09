@@ -1,14 +1,14 @@
 import axios from "axios";
 import { BASE_URL } from "../constants/BASE_URL";
-import { goToRegisterAddress } from "../Routes/coodinator";
+import { goToFeed } from "../Routes/coodinator";
 
-export const RegisterClient = (body, clean, navigate) => {
+export const RegisterAddress = (body, headers, clean, navigate) => {
+    
   axios
     .post(`${BASE_URL}/address`, body)
     .then((res) => {
-        localStorage.setItem("token", res.data.token);
         clean();
-        goToRegisterAddress(navigate);// envia para cadastro de endereço
+        goToFeed(navigate)
     })
     .catch((err) => {
         alert(err.response.data.message);

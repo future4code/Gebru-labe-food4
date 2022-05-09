@@ -9,17 +9,20 @@ import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 import { InputContainer } from "./styles";
 
-import useForm from "../../hooks/useForm";
-import { useUnprotectedPage } from "../../hooks/useUnprotectedPage";
+import useForm from "../../../hooks/useForm";
+import { useUnprotectedPage } from "../../../hooks/useUnprotectedPage";
 
-import { RegisterClient } from "../../services/RegisterClient";
+import { RegisterClient } from "../../../services/RegisterClient";
 
-import MaskCpf from "../../components/MaskCPF/MaskCPF"
+import MaskCpf from "../../../components/MaskCPF/MaskCPF"
+
+import {goToRegisterAddress} from "../../../Routes/coodinator"
 
 const RegisterForm = () => {
   useUnprotectedPage();
-  const { form, onChange, clean } = useForm({ name: "", email: "", cpf: "", password: "" });
   const navigate = useNavigate();
+
+  const { form, onChange, clean } = useForm({ name: "", email: "", cpf: "", password: "" });
   const [showPassword, setShowPassword] = useState(false);
 
   const onSubmitForm = (event) => {
@@ -138,6 +141,7 @@ const RegisterForm = () => {
           color={"primary"}
           margin={"normal"}
           type={"submit"}
+          onClick={() => goToRegisterAddress(navigate)}
         >
           Cadastrar
           
