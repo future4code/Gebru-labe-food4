@@ -2,7 +2,8 @@ import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
 import Login from '../pages/Login'
-import Register from '../pages/Register'
+import Register from '../pages/Register/RegisterClient'
+import RegisterAddress from '../pages/Register/RegisterAddress'
 import Feed from '../pages/Home/Feed'
 import Restaurant from '../pages/Home/Restaurant'
 import Profile from '../pages/Profile'
@@ -15,6 +16,7 @@ export const Router = () => (
         <Route path='perfil' element={ <Profile /> } />
         <Route path='login' element={ <Login /> } />
         <Route path='cadastro' element={ <Register /> } />
+        <Route path='cadastroAddress' element={ <RegisterAddress /> } />
         <Route path='carrinho' element={ <Cart /> } />
     </Routes> 
 )
