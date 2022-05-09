@@ -18,6 +18,10 @@ export const goToRegister = (navigate) => {
     navigate('/cadastro')
 }
 
+export const goToRegisterAddress = (navigate) => {
+    navigate('/cadastroAddress')
+}
+
 export const goToCart = (navigate) => {
     navigate('/cart')
 }
