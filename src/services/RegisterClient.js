@@ -3,10 +3,12 @@ import { BASE_URL } from "../constants/BASE_URL";
 import { goToRegisterAddress } from "../Routes/coodinator";
 
 export const RegisterClient = (body, clean, navigate) => {
+
   axios
-    .post(`${BASE_URL}/address`, body)
+    .post(`${BASE_URL}/signup`, body)
     .then((res) => {
         localStorage.setItem("token", res.data.token);
+        console.log("linha 11", res.data)
         clean();
         goToRegisterAddress(navigate);// envia para cadastro de endereço
     })

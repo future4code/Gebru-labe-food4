@@ -25,6 +25,9 @@ export const goToRegister = (navigate) => {
 export const goToRegisterAddress = (navigate) => {
     navigate('/cadastroAddress')
 }
+export const goToAddAndress = (navigate) => {
+    navigate('/addAdress')
+}
 
 export const goToCart = (navigate) => {
     navigate('/cart')

@@ -1,30 +1,28 @@
-import * as Styled from "./styled";
 import React from "react";
-import { Button } from "@mui/material";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import { Container, TextStyle3 } from "./styles";
+import LogoFood from "../../../components/logoFood/LogoFood";
+import RegisterForm from "./RegisterForm";
 import Header from "../../../components/Header";
-import { EditForm } from "./EditForm";
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { goToProfile } from "../../../Routes/coodinator";
 
-const EditPage = () => {
+const AddAdress = () => {
   const navigate = useNavigate();
   return (
-    <div>
+    <Container>
       <Header>
         <Button onClick={() => goToProfile(navigate)}>
           <ArrowBackIosNewIcon />
         </Button>
-        <h2>Editar</h2>
+        <h2>Endereço</h2>
         <div></div>
         <div></div>
       </Header>
-
-      <Styled.Container>
-        <EditForm />
-      </Styled.Container>
-    </div>
+      <RegisterForm />
+    </Container>
   );
 };
 
-export default EditPage;
+export default AddAdress;

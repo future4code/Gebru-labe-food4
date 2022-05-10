@@ -1,13 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
 import Header from "../../components/Header";
 import { BASE_URL } from "../../constants/BASE_URL";
 import { useProtectedPage } from "../../hooks/useProtectedPage";
 import { useRequestData } from "../../hooks/useRequestData";
-import { goToEdit } from "../../Routes/coodinator";
+import {
+  goToAddAndress,
+  goToEdit,
+} from "../../Routes/coodinator";
 import { CardOrder } from "./cardOrder/CardOrder";
-import EditIcon from '@mui/icons-material/Edit';
+import EditIcon from "@mui/icons-material/Edit";
+
 import {
   ButtonUi,
   ContainerProfile,
@@ -45,9 +48,9 @@ const Profile = () => {
           <p>{profile?.user.address} </p>
         </div>
         <div>
-          <button>
-          <EditIcon />
-           </button>
+          <button onClick={() => goToAddAndress(navigate)}>
+            <EditIcon />
+          </button>
         </div>
       </Rectangle>
       <HistoricoPedido>

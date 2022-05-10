@@ -1,27 +1,18 @@
 import styled from "styled-components";
 import { primary } from "../../../constants/colors";
 
-
 export const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3vh;
   padding: 0 0 4.875rem;
 `;
-export const Img = styled.img`
-  width: 60%;
-  height: 3.625rem;
-  margin: 4.5rem 8rem 1rem;
-  object-fit: contain;
-`;
+
 export const TextStyle3 = styled.span`
   width: 22.5rem;
   height: 2.625rem;
-  margin: 1rem 0 0;
-  padding: 0.75rem 2rem;
   p {
     color: ${primary};
     width: 100%;
@@ -48,5 +39,5 @@ export const InputContainer = styled.div`
   flex-direction: column;
   width: 80%;
   align-items: center;
-  margin-bottom: 5vh;
+  margin-bottom: 7vh;
 `;

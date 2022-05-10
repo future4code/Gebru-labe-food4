@@ -8,15 +8,16 @@ const headers = {
   },
 };
 
-export const editar = (body, clean, navigate) => {
+export const editarAdress = (body, clean, navigate) => {
   axios
-    .put(`${BASE_URL}/profile`, body, headers)
+    .put(`${BASE_URL}/address`, body, headers)
     .then(() => {
-      alert("usuário editado com sucesso!");
+      alert("Editado com sucesso");
       clean();
       goToProfile(navigate);
     })
     .catch((err) => {
       alert(err.response.data.message);
+      clean();
     });
 };
