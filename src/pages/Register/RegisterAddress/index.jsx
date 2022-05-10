@@ -9,9 +9,8 @@ import RegisterForm from "./RegisterForm"
 
 
 
-
 const RegisterAddress = () => {
-  useUnprotectedPage()
+  useUnprotectedPage();
   
   return (
     <Container>

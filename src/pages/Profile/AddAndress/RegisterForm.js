@@ -1,29 +1,27 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
-import {TextField,} from "@mui/material";
+import { TextField } from "@mui/material";
 import Button from "@mui/material/Button";
-
 import { InputContainer } from "./styles";
-
 import useForm from "../../../hooks/useForm";
-
-import { RegisterAddress } from "../../../services/RegisterAddress";
-import { useUnprotectedPage } from "../../../hooks/useUnprotectedPage";
-
+import { editarAdress } from "../../../services/editarAdress";
 
 const RegisterForm = () => {
-  useUnprotectedPage();
-
   const navigate = useNavigate();
 
-  const { form, onChange, clean } = useForm({ street: "", number: "", neighbourhood: "", city: "", state: "", complement: ""});
+  const { form, onChange, clean } = useForm({
+    street: "",
+    number: "",
+    neighbourhood: "",
+    city: "",
+    state: "",
+    complement: "",
+  });
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    RegisterAddress(form, clean, navigate);
+    editarAdress(form, clean, navigate);
   };
-  console.log(form)
 
   return (
     <InputContainer>
@@ -109,7 +107,6 @@ const RegisterForm = () => {
           type={"submit"}
         >
           Salvar
-          
         </Button>
       </form>
     </InputContainer>

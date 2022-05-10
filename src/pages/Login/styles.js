@@ -11,14 +11,9 @@ export const Container = styled.div`
 export const Img = styled.img`
   width: 60%;
   height: 3.625rem;
-  margin: 4.5rem 8rem 1rem;
   object-fit: contain;
 `;
 export const TextStyle3 = styled.span`
-  width: 22.5rem;
-  height: 2.625rem;
-  margin: 1rem 0 0;
-  padding: 0.75rem 2rem;
   p {
     width: 100%;
     height: 1.125rem;

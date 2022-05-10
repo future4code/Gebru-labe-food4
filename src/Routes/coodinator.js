@@ -13,6 +13,10 @@ export const goToProfile = (navigate) => {
 export const goToLogin = (navigate) => {
     navigate('/login')
 }
+export const goToEdit = (navigate) => {
+    navigate('/editar')
+}
+
 
 export const goToRegister = (navigate) => {
     navigate('/cadastro')
@@ -20,6 +24,9 @@ export const goToRegister = (navigate) => {
 
 export const goToRegisterAddress = (navigate) => {
     navigate('/cadastroAddress')
+}
+export const goToAddAndress = (navigate) => {
+    navigate('/addAdress')
 }
 
 export const goToCart = (navigate) => {
