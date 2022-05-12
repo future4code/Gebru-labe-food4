@@ -6,11 +6,13 @@ const Cart = () => {
   return (
     <div>
         <Header>
-          <h2>Cart</h2>
+          <h2>Meu carrinho</h2>
         </Header>
-        <h1>
-          Cart
-        </h1>
+        <div>
+          <p>Endereço de Entrega</p> 
+        </div>
+
+        <button>Confirmar</button>
     </div>
   )
 }
