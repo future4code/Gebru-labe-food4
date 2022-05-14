@@ -1,12 +1,28 @@
-4FoodB
+## LabeFood
+
+Aplicação desenvolvida com o intuito de ser um site de restaurante e comidas delivery.
+
 
 ### Link Trello
 https://trello.com/b/iaNW5i6X/fourfoodb
 
 ### Link Surge
-[labe-food4b.surge.sh](labe-food4b.surge.sh)
+[labefood4b.surge.sh](labefood4b.surge.sh)
 
-O que funciona:
+## Funcionalidades
+
+✅Cards com os restaurantes
+
+✅Caixa de busca
+
+✅Mobile first
 
 
-O que não funciona:
+## Não Funciona
+
+❌Ainda não está responsivo para desktop.
+
+❌Design e interface estão em andamento.
+
+❌Funcionalidade da página Carrinho e Perfil.
+
