@@ -1,6 +1,22 @@
 import React from "react";
 import Header from "../../components/Header";
-import { CartContainer, ContainerAddress, PAddress, Address, Price } from "../Cart/styled";
+import {
+  CartContainer,
+  ContainerAddress,
+  PAddress,
+  Address,
+  Price,
+  FormOfPayment,
+  H5Styled,
+  Button,
+  ContainerH5,
+  ContainerPrice,
+  Freight,
+  ContainerTotal,
+  FormPayment,
+  LabelStyled,
+  InputStyled
+} from "../Cart/styled";
 
 const Cart = () => {
   return (
@@ -14,11 +30,33 @@ const Cart = () => {
           <Address>Endereço aqui</Address>
         </ContainerAddress>
 
-        <h5>SUBTOTAL</h5>
-        <Price>R$</Price>
+        <ContainerTotal>
+          <ContainerH5>
+            <H5Styled>SUBTOTAL</H5Styled>
+          </ContainerH5>
 
-        <p>Forma de Pagamento</p>
-        <button>Confirmar</button>
+          <ContainerPrice>
+            <Freight>Frete R$</Freight>
+            <Price>R$</Price>
+          </ContainerPrice>
+        </ContainerTotal>
+
+        <FormOfPayment>Forma de pagamento</FormOfPayment>
+        <FormPayment>
+          <div>
+            <LabelStyled>
+              <InputStyled type="radio" name="pagamento" value="Dinheiro" />
+              Dinheiro
+            </LabelStyled>
+          </div>
+          <div>
+            <LabelStyled>
+              <InputStyled type="radio" name="pagamento" value="Cartão de crédito" />
+              Cartão de crédito
+            </LabelStyled>
+          </div>
+        </FormPayment>
+        <Button>Confirmar</Button>
       </CartContainer>
     </div>
   );
