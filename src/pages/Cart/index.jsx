@@ -17,6 +17,7 @@ import {
   LabelStyled,
   InputStyled
 } from "../Cart/styled";
+import Footer from '../../components/Footer'
 
 const Cart = () => {
   return (
@@ -57,6 +58,7 @@ const Cart = () => {
           </div>
         </FormPayment>
         <Button>Confirmar</Button>
+        <Footer />
       </CartContainer>
     </div>
   );
