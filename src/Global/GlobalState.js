@@ -8,6 +8,8 @@ const GlobalState = (props) => {
     const [restaurants, setRestaurants] = useState([])
     const [restaurant, setRestaurant] = useState({})
     const [products, setProducts] = useState([])
+    const [perfil, setPerfil] = useState({})
+    const [cart, setCart] = useState([])
     const headers = {
         headers: {
           auth: localStorage.getItem('token')
@@ -34,7 +36,9 @@ const GlobalState = (props) => {
         setRestaurant,
         products, 
         setProducts,
-        headers
+        headers,
+        cart,
+        setCart
     }
 
     return (

@@ -16,7 +16,7 @@ const Restaurant = (props) => {
   useProtectedPage()
   const navigate = useNavigate()
   const params = useParams()
-  const { restaurant, setRestaurant, products, setProducts, headers } = useContext(GlobalStateContext)
+  const { restaurant, setRestaurant, products, setProducts, headers, cart, setCart } = useContext(GlobalStateContext)
   // const [restaurant, setRestaurant] = useState({})
 
   useEffect(() => {
@@ -34,6 +34,22 @@ const Restaurant = (props) => {
   }, [])
 
   const price = Number(restaurant.shipping)
+
+  const addItemToCart = (newItem) => {
+    const index = cart.findIndex( (i) => i.id === newItem.id)
+    
+    const newCart = [...cart]
+
+    if(index === -1){
+      const cartItem = {...newItem, amount: 1, nameRestaurant: restaurant.name, deliveryTime: restaurant.deliveryTime, shipping: restaurant.shipping }
+      newCart.push(cartItem)
+    } else {
+      newCart[index].amount += 1
+    }
+    setCart(newCart)
+    localStorage.setItem("carrinho", JSON.stringify(newCart))
+    // console.log("50", newCart)
+  }
 
   return (
     <div>
@@ -60,7 +76,7 @@ const Restaurant = (props) => {
             {
               products ?
               products.map((product) => {
-                return <CardProduct key={product.id} product={product} />
+                return <CardProduct key={product.id} product={product} addItemToCart={addItemToCart}/>
               }) :
               null
             }
