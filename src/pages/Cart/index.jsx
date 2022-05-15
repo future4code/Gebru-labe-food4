@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Header from "../../components/Header";
 import CartAdd from "../../components/CartAdd"
 import * as Styled from './styled'
@@ -26,15 +26,18 @@ const Cart = () => {
   const [profile] = useRequestData(`${BASE_URL}/profile`);
   const guardaCarrinho = localStorage.getItem("carrinho")
   const cart = JSON.parse(guardaCarrinho)
-  console.log(cart)
+  // console.log(cart)
+
 
   const cartList = cart.map( (item) => {
     return  <CartAdd key={item.id} item={item}/>
+  } )
   
-  })
   const frete = cart.map( (item) => {
     return item.shipping
   })
+  const fretes = frete;
+
   const restaurant = cart.map( (item) => {
     return item.nameRestaurant
   })
@@ -44,10 +47,7 @@ const Cart = () => {
   const nameRestaurant = cart.map( (item) => {
     return item.nameRestaurant
   })
-  console.log( "adfa",restaurant, delivery )
-  //   const numerosDuplicados = cart.shipping.filter((item, index) => cart.shipping.indexOf(item) !== index)  
-  //  console.log(numerosDuplicados)
-
+  
   let totalPrice = 0;
   cart.forEach( (cal) => {
     totalPrice += cal.shipping + Number(cal.price * cal.amount)
@@ -62,10 +62,10 @@ const Cart = () => {
         <ContainerAddress>
           <PAddress>Endereço de entrega</PAddress>
           <Address>{profile?.user.address}</Address>
-          <div >{nameRestaurant}</div>
+          <div >{nameRestaurant && nameRestaurant}</div>
           <Styled.delivery><span>{delivery - 10 } - {delivery} min</span></Styled.delivery>
         </ContainerAddress>
-          {cartList}
+          { cart === null ? <p>carrinho vazio</p> : cartList }
         <ContainerTotal>
           <br/>
           <br/>
@@ -74,8 +74,8 @@ const Cart = () => {
           </ContainerH5>
 
           <ContainerPrice>
-            <Freight>{frete} R$</Freight>
-            <Price>R$ {totalPrice}</Price>
+            <Freight>{ fretes === null ? "0,00" : `${frete},00`} R$</Freight>
+            <Price>R$ {totalPrice === 0 ? "0,00" : `${totalPrice},00`}</Price>
           </ContainerPrice>
         </ContainerTotal>
 
