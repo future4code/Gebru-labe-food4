@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { useUnprotectedPage } from '../../../hooks/useUnprotectedPage'
+import {useProtectedPage} from "../../../hooks/useProtectedPage"
 
 import { Container, TextStyle3 } from "./styles";
 
@@ -10,7 +10,7 @@ import RegisterForm from "./RegisterForm"
 
 
 const RegisterAddress = () => {
-  useUnprotectedPage();
+  useProtectedPage();
   
   return (
     <Container>

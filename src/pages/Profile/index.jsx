@@ -25,7 +25,7 @@ const Profile = () => {
   const navigate = useNavigate();
   const [profile] = useRequestData(`${BASE_URL}/profile`);
   const [history] = useRequestData(`${BASE_URL}/orders/history`);
-  const order = history?.orders.length;
+  const order = history?.orders.length; 
 
   return (
     <ContainerProfile>

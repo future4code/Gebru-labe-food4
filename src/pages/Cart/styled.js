@@ -106,3 +106,9 @@ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubun
     background-color: #d12310;
 }
 `
+export const delivery = styled.div`
+  position: absolute;
+  margin-top: 10%;
+  padding-left: 1%;
+  color: #b8b8b8;
+`

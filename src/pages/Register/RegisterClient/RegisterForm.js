@@ -19,7 +19,7 @@ import MaskCpf from "../../../components/MaskCPF/MaskCPF"
 import {goToRegisterAddress} from "../../../Routes/coodinator"
 
 const RegisterForm = () => {
-  useUnprotectedPage();
+  // useUnprotectedPage();
   const navigate = useNavigate();
 
   const { form, onChange, clean } = useForm({ name: "", email: "", cpf: "", password: "" });
@@ -27,9 +27,9 @@ const RegisterForm = () => {
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    RegisterClient(form, clean, navigate);
+    RegisterClient(form, clean, navigate); 
+    goToRegisterAddress(navigate);
   };
-  console.log(form)
 
   return (
     <InputContainer>
@@ -141,7 +141,6 @@ const RegisterForm = () => {
           color={"primary"}
           margin={"normal"}
           type={"submit"}
-          onClick={() => goToRegisterAddress(navigate)}
         >
           Cadastrar
           

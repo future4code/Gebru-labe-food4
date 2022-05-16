@@ -5,15 +5,16 @@ import { goToFeed } from "../Routes/coodinator";
 const headers = {
     headers: {
         auth: localStorage.getItem("token"),
-    },
+    }
 };
 
-export const RegisterAddress = (body, clean, navigate) => {
+export const registerAddress = (body, clean, navigate) => {
     
   axios
-    .post(`${BASE_URL}/address`, body, headers)
+    .put(`${BASE_URL}/address`, body, headers)
     .then(() => {
-        clean();
+        alert("Endereço criado com sucesso");
+        clean();    
         goToFeed(navigate)
     })
     .catch((err) => {

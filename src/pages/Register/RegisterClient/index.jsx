@@ -11,8 +11,7 @@ import RegisterForm from "./RegisterForm"
 
 
 const Register = () => {
-  useUnprotectedPage()
-  
+ 
   return (
     <Container>
       <LogoFood/>
