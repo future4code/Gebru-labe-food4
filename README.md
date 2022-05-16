@@ -7,7 +7,7 @@ Aplicação desenvolvida com o intuito de ser um site de restaurante e comidas d
 https://trello.com/b/iaNW5i6X/fourfoodb
 
 ### Link Surge
-[labefood4.surge.sh](labefood4.surge.sh)
+[labe-food4-project.surge.sh](labe-food4-project.surge.sh)
 
 ## Funcionalidades
 
