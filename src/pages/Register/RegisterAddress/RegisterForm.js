@@ -8,22 +8,22 @@ import { InputContainer } from "./styles";
 
 import useForm from "../../../hooks/useForm";
 
-import { RegisterAddress } from "../../../services/RegisterAddress";
-import { useUnprotectedPage } from "../../../hooks/useUnprotectedPage";
+import { registerAddress } from "../../../services/registerAddress";
+import { goToFeed } from "../../../Routes/coodinator";
+
 
 
 const RegisterForm = () => {
-  useUnprotectedPage();
 
   const navigate = useNavigate();
 
   const { form, onChange, clean } = useForm({ street: "", number: "", neighbourhood: "", city: "", state: "", complement: ""});
-
+console.log(form)
   const onSubmitForm = (event) => {
     event.preventDefault();
-    RegisterAddress(form, clean, navigate);
+    registerAddress(form, clean, navigate);
+    goToFeed(navigate)
   };
-  console.log(form)
 
   return (
     <InputContainer>

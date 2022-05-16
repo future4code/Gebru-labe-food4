@@ -13,6 +13,7 @@ import {
   SearchInput,
 } from "../../../components/SearchBar/styles";
 import { AiOutlineSearch } from "react-icons/ai";
+import Footer from '../../../components/Footer'
 
 const Feed = () => {
   useProtectedPage();
@@ -54,6 +55,8 @@ const Feed = () => {
       ) : (
         <h1>Loading</h1>
       )}
+
+      <Footer />
     </Styled.Container>
   );
 };

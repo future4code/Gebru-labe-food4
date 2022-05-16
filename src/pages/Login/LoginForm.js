@@ -19,7 +19,7 @@ const LoginForm = () => {
   useUnprotectedPage();
   const { form, onChange, clean } = useForm({ email: "", password: "" });
   const navigate = useNavigate();
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(false); 
 
   const onSubmitForm = (event) => {
     event.preventDefault();

@@ -41,7 +41,7 @@ const Restaurant = (props) => {
     const newCart = [...cart]
 
     if(index === -1){
-      const cartItem = {...newItem, amount: 1, nameRestaurant: restaurant.name, deliveryTime: restaurant.deliveryTime, shipping: restaurant.shipping }
+      const cartItem = {...newItem, amount: 1, nameRestaurant: restaurant.name, deliveryTime: restaurant.deliveryTime, shipping: restaurant.shipping, idRes: restaurant.id }
       newCart.push(cartItem)
     } else {
       newCart[index].amount += 1

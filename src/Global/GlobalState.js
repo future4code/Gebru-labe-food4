@@ -8,7 +8,6 @@ const GlobalState = (props) => {
     const [restaurants, setRestaurants] = useState([])
     const [restaurant, setRestaurant] = useState({})
     const [products, setProducts] = useState([])
-    const [perfil, setPerfil] = useState({})
     const [cart, setCart] = useState([])
     const headers = {
         headers: {
