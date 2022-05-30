@@ -47,7 +47,7 @@ const Restaurant = (props) => {
       newCart[index].amount += 1
     }
     setCart(newCart)
-    localStorage.setItem("carrinho", JSON.stringify(newCart))
+    // localStorage.setItem("carrinho", JSON.stringify(newCart))
     // console.log("50", newCart)
   }
 

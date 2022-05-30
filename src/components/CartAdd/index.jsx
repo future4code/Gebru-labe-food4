@@ -1,10 +1,9 @@
 import React from 'react'
-
 import * as Styled from './styled'
 import Button from "@mui/material/Button"
 
-const CartAdd = ({item}) => {
-
+const CartAdd = ({item, removeCart}) => {
+ 
     return (
         <Styled.Container>
            
@@ -17,7 +16,7 @@ const CartAdd = ({item}) => {
                     borderTopLeft="10px"
                     borderBottomRight="10px"
                 >
-                    <Button onClick={()=> alert("clicou")}>Remover</Button>
+                    <Button onClick={()=> removeCart(item)}>Remover</Button>
                 </Styled.Buttons>
             </Styled.Content>
             <Styled.DivAmount>{item.amount}</Styled.DivAmount>

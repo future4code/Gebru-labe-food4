@@ -1,5 +1,5 @@
 import * as React from "react";
-import { HorderList } from "./styled";
+import { ContainerHorder, HorderList } from "./styled";
 
 export function CardOrder({ history }) {
   
@@ -16,5 +16,5 @@ export function CardOrder({ history }) {
     );
   });
 
-  return <>{listOrders && listOrders}</>;
+  return <ContainerHorder>{listOrders && listOrders}</ContainerHorder>;
 }

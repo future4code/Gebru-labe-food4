@@ -5,7 +5,7 @@ import Button from "@mui/material/Button"
 
 const CardProduct = (props) => {
     const { product } = props
-    const { addItemToCart} = props
+    const { addItemToCart} = props  
 
     return (
         <Styled.Container>
